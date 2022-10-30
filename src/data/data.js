@@ -38,3 +38,7 @@ export const getInvoices = () => {
 export const getInvoiceByNumber = (number) => {
   return invoices.filter((invoice) => invoice.number === +number);
 };
+
+export const deleteInvoice = (number) => {
+  invoices = invoices.filter((invoice) => invoice.number !== +number);
+};
